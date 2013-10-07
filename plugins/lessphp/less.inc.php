@@ -1,6 +1,25 @@
 <?php
 
 /**
+ * less function for kirby
+ *
+ * Use it like the `css` function in your templates.
+ *
+ * `<?php echo less('less_file.less') ?>`
+ *
+ * It will automatically compile your less file to css
+ * for you. Note that it does actually compile to a .css
+ * file, but rather preprocesses the less and adds it to
+ * a `style` tag.
+*/
+function less($file){
+	$root = c::get('root');
+	$less = new lessc;
+	$compiled = $less->compileFile($root . DIRECTORY_SEPARATOR . $file);
+	echo '<style type="text/css">' . $compiled . '</style>';
+}
+
+/**
  * lessphp v0.4.0
  * http://leafo.net/lessphp
  *
