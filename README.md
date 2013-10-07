@@ -3,8 +3,8 @@ kirby-lessphp
 
 Lessphp for KirbyCMS.
 
-This is a processor for LESS files. Note: not a preprocessor!
-Built using the lessphp library by Leaf Corcoran.
+This is a processor for LESS files. Note: not a preprocessor!  
+Built using the lessphp library by Leaf Corcoran.  
 This plugin will automatically process LESS-Files.
 
 1. Copy the lessc.inc.php in the subfolder "lessphp" inside Kirby's plugin folder. 
